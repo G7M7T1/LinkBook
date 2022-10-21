@@ -1,0 +1,17 @@
+{
+  "name": "linkbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx tailwindcss -i ./LinkBook/wwwroot/css/tailwind.css -o ./LinkBook/wwwroot/css/site.css --watch",
+    "build": "tailwind build ./LinkBook/wwwroot/css/tailwind.css -o ./LinkBook/wwwroot/css/site.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}
