@@ -5,6 +5,7 @@ module.exports = {
     "./LinkBook/Views/*.{cshtml,js}",
     "./LinkBook/Views/**/*.{cshtml,js}",
     "./LinkBook/Views/Home/*.{cshtml,js}",
+    "./LinkBook/Views/Category/*.{cshtml,js}",
     "./LinkBook/Views/Shared/*.{cshtml,js}",
     "./LinkBook/wwwroot/js/*.{cshtml,js}"
   ],

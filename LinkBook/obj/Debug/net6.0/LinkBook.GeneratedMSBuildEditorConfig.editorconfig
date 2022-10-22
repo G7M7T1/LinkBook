@@ -11,9 +11,13 @@ build_property.RootNamespace = LinkBook
 build_property.ProjectDir = C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/g7m7t/RiderProjects/LinkBook/LinkBook/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/g7m7t/RiderProjects/LinkBook/LinkBook/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
