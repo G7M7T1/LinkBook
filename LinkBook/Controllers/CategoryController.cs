@@ -19,8 +19,19 @@ public class CategoryController : Controller
         return View(objCategoryList);
     }
 
+    //get
     public IActionResult Create()
     {
         return View();
+    }
+    
+    //post
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Create(Category obj)
+    {
+        _db.Categories.Add(obj);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
     }
 }
