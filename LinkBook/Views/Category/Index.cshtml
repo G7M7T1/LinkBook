@@ -26,6 +26,9 @@
                 <th scope="col" class="py-3 px-6">
                     Create Date Time
                 </th>
+                <th scope="col" class="py-3 px-6 bg-gray-50 dark:bg-gray-800">
+                    Change
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -35,14 +38,22 @@
                     <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
                         @obj.Id.ToString()
                     </th>
+
                     <td class="py-4 px-6">
                         @obj.Name
                     </td>
+
                     <td class="py-4 px-6 bg-gray-50 dark:bg-gray-800">
                         @obj.DisplayOrder.ToString()
                     </td>
+
                     <td class="py-4 px-6">
                         @obj.CreateDateTime.ToString()
+                    </td>
+
+                    <td class="py-4 px-6 bg-gray-50 dark:bg-gray-800 flex justify-around">
+                        <a class="text-green-500" asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id">Edit</a>
+                        <a class="text-red-500" asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id">Remove</a>
                     </td>
                 </tr>
             }
