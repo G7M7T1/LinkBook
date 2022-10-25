@@ -27,6 +27,9 @@ public class Product
     
     [Required]
     public double Price100 { get; set; }
+    
+    [Required]
+    public double ListPrice { get; set; }
 
     public string ImageUrl { get; set; }
     
