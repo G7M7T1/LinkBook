@@ -1,4 +1,4 @@
-using LinkBook.Data;
+using LinkBook.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

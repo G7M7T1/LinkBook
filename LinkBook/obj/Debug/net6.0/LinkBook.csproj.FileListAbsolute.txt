@@ -390,3 +390,7 @@ C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\tr\Microsoft.Cod
 C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\obj\Debug\net6.0\LinkBook.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\LinkBook.DataAccess.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\LinkBook.Models.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\LinkBook.DataAccess.pdb
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\LinkBook.Models.pdb

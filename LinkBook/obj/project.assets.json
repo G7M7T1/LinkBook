@@ -1367,6 +1367,32 @@
             "rid": "win"
           }
         }
+      },
+      "LinkBook.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "LinkBook.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0-rc.2.22472.11",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.0-rc.2.22472.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0-rc.2.22472.11"
+        },
+        "compile": {
+          "bin/placeholder/LinkBook.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LinkBook.DataAccess.dll": {}
+        }
+      },
+      "LinkBook.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/LinkBook.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LinkBook.Models.dll": {}
+        }
       }
     }
   },
@@ -4021,10 +4047,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "LinkBook.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../LinkBook.DataAccess/LinkBook.DataAccess.csproj",
+      "msbuildProject": "../LinkBook.DataAccess/LinkBook.DataAccess.csproj"
+    },
+    "LinkBook.Models/1.0.0": {
+      "type": "project",
+      "path": "../LinkBook.Models/LinkBook.Models.csproj",
+      "msbuildProject": "../LinkBook.Models/LinkBook.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "LinkBook.DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 6.0.10",
       "Microsoft.EntityFrameworkCore >= 7.0.0-rc.2.22472.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0-rc.2.22472.11",
@@ -4062,7 +4099,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\g7m7t\\RiderProjects\\LinkBook\\LinkBook.DataAccess\\LinkBook.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\g7m7t\\RiderProjects\\LinkBook\\LinkBook.DataAccess\\LinkBook.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

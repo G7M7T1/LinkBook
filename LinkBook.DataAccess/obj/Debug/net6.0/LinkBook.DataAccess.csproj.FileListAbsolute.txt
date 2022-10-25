@@ -1,0 +1,17 @@
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\LinkBook.DataAccess.csproj.AssemblyReference.cache
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\LinkBook.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\LinkBook.DataAccess.AssemblyInfoInputs.cache
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\LinkBook.DataAccess.AssemblyInfo.cs
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\LinkBook.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\bin\Debug\net6.0\LinkBook.DataAccess.deps.json
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\bin\Debug\net6.0\LinkBook.DataAccess.runtimeconfig.json
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\bin\Debug\net6.0\LinkBook.DataAccess.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\bin\Debug\net6.0\LinkBook.DataAccess.pdb
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\bin\Debug\net6.0\LinkBook.Models.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\bin\Debug\net6.0\LinkBook.Models.pdb
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\LinkBook.DataAccess.csproj.CopyComplete
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\LinkBook.DataAccess.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\refint\LinkBook.DataAccess.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\LinkBook.DataAccess.pdb
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\LinkBook.DataAccess.genruntimeconfig.cache
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.DataAccess\obj\Debug\net6.0\ref\LinkBook.DataAccess.dll

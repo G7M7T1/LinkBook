@@ -77,7 +77,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Migrations" />
+      <ProjectReference Include="..\LinkBook.DataAccess\LinkBook.DataAccess.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,0 +1,12 @@
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\bin\Debug\net6.0\LinkBook.Models.deps.json
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\bin\Debug\net6.0\LinkBook.Models.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\bin\Debug\net6.0\LinkBook.Models.pdb
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\obj\Debug\net6.0\LinkBook.Models.csproj.AssemblyReference.cache
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\obj\Debug\net6.0\LinkBook.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\obj\Debug\net6.0\LinkBook.Models.AssemblyInfoInputs.cache
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\obj\Debug\net6.0\LinkBook.Models.AssemblyInfo.cs
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\obj\Debug\net6.0\LinkBook.Models.csproj.CoreCompileInputs.cache
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\obj\Debug\net6.0\LinkBook.Models.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\obj\Debug\net6.0\refint\LinkBook.Models.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\obj\Debug\net6.0\LinkBook.Models.pdb
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Models\obj\Debug\net6.0\ref\LinkBook.Models.dll

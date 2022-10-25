@@ -34,6 +34,7 @@
     ".NETCoreApp,Version=v6.0": {
       "LinkBook/1.0.0": {
         "dependencies": {
+          "LinkBook.DataAccess": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.10",
           "Microsoft.EntityFrameworkCore": "7.0.0-rc.2.22472.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0-rc.2.22472.11",
@@ -1277,6 +1278,28 @@
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.0.20.51904"
           }
+        }
+      },
+      "LinkBook.DataAccess/1.0.0": {
+        "dependencies": {
+          "LinkBook.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0-rc.2.22472.11",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.0-rc.2.22472.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0-rc.2.22472.11"
+        },
+        "runtime": {
+          "LinkBook.DataAccess.dll": {}
+        },
+        "compile": {
+          "LinkBook.DataAccess.dll": {}
+        }
+      },
+      "LinkBook.Models/1.0.0": {
+        "runtime": {
+          "LinkBook.Models.dll": {}
+        },
+        "compile": {
+          "LinkBook.Models.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/6.0.0.0": {
@@ -3487,6 +3510,16 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
+    },
+    "LinkBook.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LinkBook.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/6.0.0.0": {
       "type": "referenceassembly",
