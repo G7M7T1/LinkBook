@@ -1,0 +1,12 @@
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\bin\Debug\net6.0\LinkBook.Utility.deps.json
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\bin\Debug\net6.0\LinkBook.Utility.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\bin\Debug\net6.0\LinkBook.Utility.pdb
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\obj\Debug\net6.0\LinkBook.Utility.csproj.AssemblyReference.cache
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\obj\Debug\net6.0\LinkBook.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\obj\Debug\net6.0\LinkBook.Utility.AssemblyInfoInputs.cache
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\obj\Debug\net6.0\LinkBook.Utility.AssemblyInfo.cs
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\obj\Debug\net6.0\LinkBook.Utility.csproj.CoreCompileInputs.cache
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\obj\Debug\net6.0\LinkBook.Utility.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\obj\Debug\net6.0\refint\LinkBook.Utility.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\obj\Debug\net6.0\LinkBook.Utility.pdb
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook.Utility\obj\Debug\net6.0\ref\LinkBook.Utility.dll
