@@ -1,4 +1,5 @@
 using LinkBook.DataAccess;
+using LinkBook.DataAccess.Repository.IRepository;
 using LinkBook.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,16 +7,16 @@ namespace LinkBook.Controllers;
 
 public class CategoryController : Controller
 {
-    private readonly ApplicationDbContext _db;
+    private readonly IunitOfWork _unitOfWork;
 
-    public CategoryController(ApplicationDbContext db)
+    public CategoryController(IunitOfWork unitOfWork)
     {
-        _db = db;
+        _unitOfWork = unitOfWork;
     }
     // GET
     public IActionResult Index()
     {
-        IEnumerable<Category> objCategoryList = _db.Categories;
+        IEnumerable<Category> objCategoryList = _unitOfWork.Category.GetAll();
         return View(objCategoryList);
     }
 
@@ -37,8 +38,8 @@ public class CategoryController : Controller
         
         if (ModelState.IsValid)
         {
-            _db.Categories.Add(obj);
-            _db.SaveChanges();
+            _unitOfWork.Category.Add(obj);
+            _unitOfWork.Save();
             return RedirectToAction("Index");
         }
         return View(obj);
@@ -51,7 +52,7 @@ public class CategoryController : Controller
             return NotFound();
         }
 
-        var categoryFromDb = _db.Categories.Find(id);
+        var categoryFromDb = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
         // var categoryFromDbFirst = _db.Categories.FirstOrDefault(u => u.Id == id);
         // var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);
         if (categoryFromDb == null)
@@ -74,8 +75,8 @@ public class CategoryController : Controller
         
         if (ModelState.IsValid)
         {
-            _db.Categories.Update(obj);
-            _db.SaveChanges();
+            _unitOfWork.Category.Update(obj);
+            _unitOfWork.Save();
             return RedirectToAction("Index");
         }
         return View(obj);
@@ -89,7 +90,7 @@ public class CategoryController : Controller
             return NotFound();
         }
         
-        var categoryFromDb = _db.Categories.Find(id);
+        var categoryFromDb = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == id);
         // var categoryFromDbFirst = _db.Categories.FirstOrDefault(u => u.Id == id);
         // var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);
         if (categoryFromDb == null)
@@ -97,8 +98,8 @@ public class CategoryController : Controller
             return NotFound();
         }
         
-        _db.Categories.Remove(categoryFromDb);
-        _db.SaveChanges();
+        _unitOfWork.Category.Remove(categoryFromDb);
+        _unitOfWork.Save();
         return RedirectToAction("Index");
     }
     
