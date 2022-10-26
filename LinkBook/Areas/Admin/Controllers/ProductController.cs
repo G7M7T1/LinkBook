@@ -11,17 +11,18 @@ namespace LinkBook.Controllers;
 public class ProductController : Controller
 {
     private readonly IunitOfWork _unitOfWork;
+    private readonly IWebHostEnvironment _hostEnvironment;
 
-    public ProductController(IunitOfWork unitOfWork)
+    public ProductController(IunitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
     {
         _unitOfWork = unitOfWork;
+        _hostEnvironment = hostEnvironment;
     }
 
     // GET
     public IActionResult Index()
     {
-        IEnumerable<Product> objProductList = _unitOfWork.Product.GetAll();
-        return View(objProductList);
+        return View();
     }
 
     public IActionResult Upsert(int? id)
@@ -67,16 +68,17 @@ public class ProductController : Controller
 
         else
         {
-            var coverTypeFromDb = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
-            // var categoryFromDbFirst = _db.Categories.FirstOrDefault(u => u.Id == id);
-            // var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);
-            if (coverTypeFromDb == null)
-            {
-                return NotFound();
-            }
+            productVM.Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
+            // var coverTypeFromDb = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
+            // // var categoryFromDbFirst = _db.Categories.FirstOrDefault(u => u.Id == id);
+            // // var categoryFromDbSingle = _db.Categories.SingleOrDefault(u => u.Id == id);
+            // if (coverTypeFromDb == null)
+            // {
+            //     return NotFound();
+            // }
+            
+            return View(productVM);
         }
-
-        return View(productVM);
     }
 
     //post
@@ -86,6 +88,41 @@ public class ProductController : Controller
     {
         if (ModelState.IsValid)
         {
+            string wwwRootPath = _hostEnvironment.WebRootPath;
+
+            if (file != null)
+            {
+                string fileName = Guid.NewGuid().ToString();
+                var uploads = Path.Combine(wwwRootPath, @"images\products");
+                var extension = Path.GetExtension(file.FileName);
+
+                if (obj.Product.ImageUrl != null)
+                {
+                    var oldImagePath = Path.Combine(wwwRootPath, obj.Product.ImageUrl.TrimStart('\\'));
+
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+
+                using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                {
+                    file.CopyTo(fileStreams);
+                }
+
+                obj.Product.ImageUrl = @"\images\products" + fileName + extension;
+            }
+
+            if (obj.Product.Id == 0)
+            {
+                _unitOfWork.Product.Add(obj.Product);
+            }
+            else
+            {
+                _unitOfWork.Product.Update(obj.Product);
+            }
+            
             //_unitOfWork.Product.Update(obj);
             _unitOfWork.Save();
             return RedirectToAction("Index");
@@ -129,4 +166,16 @@ public class ProductController : Controller
     //      _db.SaveChanges();
     //      return RedirectToAction("Index");
     //  }
+
+    #region API Calls
+
+    [HttpGet]
+    public IActionResult GetAll()
+    {
+        var productList = _unitOfWork.Product.GetAll(includeProperties:"Category,CoverType");
+        return Json(new { data = productList });
+    }
+    
+
+    #endregion
 }
