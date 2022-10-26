@@ -1,57 +1,89 @@
-@model Product
+@model LinkBook.Models.ViewModels.ProductVM
 
 <section class="min-h-screen dark:bg-gray-900 mt-6">
     <div class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
         <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white">Edit Product</h2>
 
-        <form method="post" asp-action="Upsert">
+        <form method="post" asp-action="Upsert" enctype="multipart/form-data">
             <div class="grid grid-cols-1 gap-6 mt-4 mb-4">
-                <div>
-                    <label asp-for="Title" class="text-gray-700 dark:text-gray-200"></label>
-                    <input asp-for="Title" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-                    <span class="text-red-500" asp-validation-for="Title"></span>
-                </div>
-                
-                <div>
-                    <label asp-for="Description" class="text-gray-700 dark:text-gray-200"></label>
-                    <textarea asp-for="Description" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"></textarea>
-                    <span class="text-red-500" asp-validation-for="Description"></span>
+
+                <div class="grid grid-cols-1 gap-6 mt-4 mb-4 sm:grid-cols-2">
+                    <div>
+                        <label asp-for="Product.Title" class="text-gray-700 dark:text-gray-200"></label>
+                        <input asp-for="Product.Title" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        <span class="text-red-500" asp-validation-for="Product.Title"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="Product.ISBN" class="text-gray-700 dark:text-gray-200"></label>
+                        <input asp-for="Product.ISBN" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        <span class="text-red-500" asp-validation-for="Product.ISBN"></span>
+                    </div>
                 </div>
 
                 <div>
-                    <label asp-for="ISBN" class="text-gray-700 dark:text-gray-200"></label>
-                    <input asp-for="ISBN" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-                    <span class="text-red-500" asp-validation-for="ISBN"></span>
+                    <label asp-for="Product.Description" class="text-gray-700 dark:text-gray-200"></label>
+                    <textarea asp-for="Product.Description" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"></textarea>
+                    <span class="text-red-500" asp-validation-for="Product.Description"></span>
                 </div>
 
                 <div>
-                    <label asp-for="Author" class="text-gray-700 dark:text-gray-200"></label>
-                    <input asp-for="Author" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-                    <span class="text-red-500" asp-validation-for="Author"></span>
+                    <label asp-for="Product.Author" class="text-gray-700 dark:text-gray-200"></label>
+                    <input asp-for="Product.Author" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                    <span class="text-red-500" asp-validation-for="Product.Author"></span>
                 </div>
 
-                <div>
-                    <label asp-for="ListPrice" class="text-gray-700 dark:text-gray-200"></label>
-                    <input asp-for="ListPrice" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-                    <span class="text-red-500" asp-validation-for="ListPrice"></span>
+                <div class="grid grid-cols-1 gap-6 mt-4 mb-4 sm:grid-cols-2">
+                    <div>
+                        <label asp-for="Product.Price" class="text-gray-700 dark:text-gray-200"></label>
+                        <input asp-for="Product.Price" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        <span class="text-red-500" asp-validation-for="Product.Price"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="Product.Price50" class="text-gray-700 dark:text-gray-200"></label>
+                        <input asp-for="Product.Price50" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        <span class="text-red-500" asp-validation-for="Product.Price50"></span>
+                    </div>
                 </div>
 
-                <div>
-                    <label asp-for="Price" class="text-gray-700 dark:text-gray-200"></label>
-                    <input asp-for="Price" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-                    <span class="text-red-500" asp-validation-for="Price"></span>
+                <div class="grid grid-cols-1 gap-6 mt-4 mb-4 sm:grid-cols-2">
+                    <div>
+                        <label asp-for="Product.Price100" class="text-gray-700 dark:text-gray-200"></label>
+                        <input asp-for="Product.Price100" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        <span class="text-red-500" asp-validation-for="Product.Price100"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="Product.ListPrice" class="text-gray-700 dark:text-gray-200"></label>
+                        <input asp-for="Product.ListPrice" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                        <span class="text-red-500" asp-validation-for="Product.ListPrice"></span>
+                    </div>
                 </div>
 
-                <div>
-                    <label asp-for="Price50" class="text-gray-700 dark:text-gray-200"></label>
-                    <input asp-for="Price50" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-                    <span class="text-red-500" asp-validation-for="Price50"></span>
+
+                <div class="grid grid-cols-1 gap-6 mt-4 mb-4 sm:grid-cols-2">
+                    <div>
+                        <label asp-for="Product.CategoryId" class="text-gray-700 dark:text-gray-200"></label>
+                        <select asp-for="Product.CategoryId" asp-items="@Model.CategoryList" class="block p-2 mb-6 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option disabled selected>Select Category</option>
+                        </select>
+                        <span class="text-red-500" asp-validation-for="Product.CategoryId"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="Product.CoverTypeId" class="text-gray-700 dark:text-gray-200"></label>
+                        <select asp-for="Product.CoverTypeId" asp-items="@Model.CoverTypeList" class="block p-2 mb-6 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option disabled selected>Select CoverType</option>
+                        </select>
+                        <span class="text-red-500" asp-validation-for="Product.CoverTypeId"></span>
+                    </div>
                 </div>
 
+                @*  Image Upload *@
                 <div>
-                    <label asp-for="Price100" class="text-gray-700 dark:text-gray-200"></label>
-                    <input asp-for="Price100" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-                    <span class="text-red-500" asp-validation-for="Price100"></span>
+                    <label asp-for="Product.ImageUrl" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                    <input type="file" asp-for="Product.ImageUrl" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400">
                 </div>
             </div>
 

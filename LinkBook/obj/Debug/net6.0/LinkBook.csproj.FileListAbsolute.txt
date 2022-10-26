@@ -565,3 +565,5 @@ C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\runtimes\unix\li
 C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\g7m7t\RiderProjects\LinkBook\LinkBook\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
